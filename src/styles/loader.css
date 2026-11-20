@@ -1,0 +1,103 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: all;
+}
+
+/* Two doors that slide apart; the brand is split down the middle. */
+.loader__panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  overflow: hidden;
+  background:
+    radial-gradient(90% 70% at 100% 50%, rgba(11, 6, 20, 0.35), rgba(7, 3, 15, 0.78) 90%);
+  will-change: transform;
+}
+
+.loader__panel--l {
+  left: 0;
+  border-right: 1px solid rgba(183, 156, 255, 0.18);
+}
+
+.loader__panel--r {
+  right: 0;
+  background: radial-gradient(90% 70% at 0% 50%, rgba(11, 6, 20, 0.35), rgba(7, 3, 15, 0.78) 90%);
+}
+
+.loader__brand {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  text-align: center;
+}
+
+.loader__panel--l .loader__brand {
+  left: 0;
+}
+
+.loader__panel--r .loader__brand {
+  right: 0;
+}
+
+.loader__mark {
+  width: clamp(9.5rem, 22vw, 16.5rem);
+  height: auto;
+  display: block;
+}
+
+.loader__word {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.loader__sub {
+  font-size: var(--fs-label);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding-inline: 1rem;
+}
+
+.loader__status {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(2rem, 6vh, 3.5rem);
+  transform: translateX(-50%);
+  width: min(240px, 60vw);
+  text-align: center;
+}
+
+.loader__bar {
+  height: 2px;
+  background: rgba(183, 156, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loader__bar span {
+  display: block;
+  height: 100%;
+  background: var(--lime-400);
+  transform-origin: left;
+  transform: scaleX(0.08);
+}
+
+.loader__status p {
+  margin-top: 0.8rem;
+  font-size: var(--fs-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}

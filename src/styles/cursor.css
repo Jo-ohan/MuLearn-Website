@@ -1,0 +1,76 @@
+/* ---------- Custom cursor (fine pointers only; component not rendered otherwise) ---------- */
+.has-custom-cursor,
+.has-custom-cursor a,
+.has-custom-cursor button,
+.has-custom-cursor [role='button'],
+.has-custom-cursor summary,
+.has-custom-cursor label[for] {
+  cursor: none;
+}
+
+.cursor-pos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  will-change: transform;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.cursor-pos.is-visible { opacity: 1; }
+.cursor-pos.is-hidden { opacity: 0 !important; }
+
+.cursor-dot {
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%;
+  background: var(--lime-400);
+}
+
+.cursor-ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 196, 255, 0.5);
+  background: rgba(154, 99, 255, 0.05);
+  transform: translate(-50%, -50%) scale(1);
+  display: grid;
+  place-items: center;
+  transition:
+    width 0.4s var(--ease-out),
+    height 0.4s var(--ease-out),
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.2s var(--ease-out);
+}
+.cursor-ring.is-link {
+  width: 68px;
+  height: 68px;
+  background: rgba(184, 245, 90, 0.1);
+  border-color: rgba(184, 245, 90, 0.65);
+}
+.cursor-ring.is-view {
+  width: 92px;
+  height: 92px;
+  background: rgba(122, 61, 240, 0.55);
+  border-color: transparent;
+}
+.cursor-ring.is-down { transform: translate(-50%, -50%) scale(0.82); }
+
+.cursor-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.cursor-ring.is-view .cursor-label { opacity: 1; }
+
+.magnetic { display: inline-block; }
