@@ -21,12 +21,13 @@ const BENEFITS = [
   'A place to practise teaching and presenting',
 ];
 
-const STEPS = [
+/* const STEPS = [
   { t: 'Open the official joining link', d: 'Use the button below. It takes you to the official µLearn onboarding.' },
   { t: 'Complete the onboarding', d: 'Follow the instructions on the official page to set up your membership.' },
   { t: 'Join the community Discord', d: 'This is where sessions, announcements and conversations happen.' },
   { t: 'Show up to something', d: 'Pick an upcoming event or a learning circle and take part.' },
 ];
+*/
 
 const joinHref = LINKS.join.href;
 
