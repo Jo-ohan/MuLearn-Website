@@ -21,14 +21,6 @@ const BENEFITS = [
   'A place to practise teaching and presenting',
 ];
 
-/* const STEPS = [
-  { t: 'Open the official joining link', d: 'Use the button below. It takes you to the official µLearn onboarding.' },
-  { t: 'Complete the onboarding', d: 'Follow the instructions on the official page to set up your membership.' },
-  { t: 'Join the community Discord', d: 'This is where sessions, announcements and conversations happen.' },
-  { t: 'Show up to something', d: 'Pick an upcoming event or a learning circle and take part.' },
-];
-*/
-
 const joinHref = LINKS.join.href;
 
 export default function Join() {
@@ -75,28 +67,6 @@ export default function Join() {
           </FadeIn>
         </div>
       </section>
-
-      {/* How to get started
-      <section className="section join-steps">
-        <div className="container">
-          <SectionHeader eyebrow="How to get started" title="Four steps." />
-          <FadeIn as="ol" className="steps" stagger={0.1} y={40}>
-            {STEPS.map((s, i) => (
-              <li key={s.t} className="step">
-                <span className="step__num">{i + 1}</span>
-                <div>
-                  <h3 className="h3">{s.t}</h3>
-                  <p className="dim">{s.d}</p>
-                </div>
-              </li>
-            ))}
-          </FadeIn>
-          <FadeIn className="step-note">
-            <span className="placeholder-tag">Onboarding details — confirm exact steps with the core team</span>
-          </FadeIn>
-        </div>
-      </section>
-      */}
 
       {/* Official link */}
       <section className="section join-link" aria-labelledby="official-link">

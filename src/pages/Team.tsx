@@ -14,7 +14,7 @@ export default function Team() {
         eyebrow="Our team"
         title={'The people\n*behind µLearn CHN.*'}
         lead="Students and mentors who give their time to keep the community learning, building and welcoming."
-        aside=""
+        aside="21 Members"
       />
 
       {TEAM_GROUPS.map((g) => {
